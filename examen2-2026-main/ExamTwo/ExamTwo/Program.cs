@@ -13,6 +13,8 @@ builder.Services.AddSingleton<Database>();
 
 var app = builder.Build();
 
+builder.Services.AddScoped<ICoffeeMachineService, CoffeMachineService>();
+
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
